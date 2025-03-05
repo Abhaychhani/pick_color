@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  outline: none;
+}
+:root {
+  --navHeight: 4rem;
+  --primary-color: rgb(109, 17, 196);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0 4rem;
+  overflow-x: hidden;
+}
+body main {
+  height: 100%;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+main header {
+  height: 100vh;
+  width: 100%;
+}
+
+/* navbar css */
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--navHeight);
+}
+.navbar .logo {
+  position: relative;
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bolder;
+}
+.navbar .menu-sm {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  visibility: hidden;
+  opacity: 0;
+  height: 100vh;
+  width: 100%;
+  transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    visibility 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: var(--primary-color);
+  padding-top: var(--navHeight);
+
+}
+.navbar .menu-sm li{
+  text-align: center;
+}
+.navbar .menu-sm li a{
+    display: block;
+    color:white;
+    padding: 1rem;
+}
+.menu-sm-icon {
+    position: relative;
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.navbar .menu-lg {
+    list-style: none;
+    font-size: 1.125rem;
+}
+.navbar .menu-lg li a{
+  color: #222;
+  cursor: pointer;
+}
+.navbar .menu-lg li a:hover{
+    color: var(--primary-color);
+}
+
+/* hero header css */
+
+section.hero {
+  height: calc(100vh - var(--navHeight));
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+p.hero-heading {
+  font-size: 4rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bolder;
+  width: 80%;
+}
+p.hero-para{
+    width: 70%;
+}
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero-btns a {
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  border-radius: 7px;
+  transition: background-color 0.5s,
+    transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  box-shadow: 2px 2px 4px 0 #333;
+}
+.hero-btns a:active {
+  transform: scale(0.9);
+}
+.hero-btns a:nth-child(1),
+.hero-btns a:nth-child(2):hover {
+  border: 1px solid transparent;
+  background-color: var(--primary-color);
+  color: white;
+}
+.hero-btns a:nth-child(1):hover,
+.hero-btns a:nth-child(2) {
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.hero-image{
+  height: 100%;
+  width: 40%;
+}
+.hero-image img{
+    position: absolute;
+    right: 0rem;
+    width: 50%;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.2));
+    animation: animate_hero_image 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+}
+@keyframes animate_hero_image {
+    from{
+        transform: scale(1);
+        top:1rem;
+    }
+    to{
+        transform: scale(0.85);
+        top: 4rem;
+    }
+}
+
+/* main section css */
+
+main section {
+  height: calc(100vh - 6rem);
+}
+h1.colors-heading{
+    text-align: center; 
+    height: 4rem;
+    line-height: 4rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 0 var(--primary-color);
+}
+section#gererateColors {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+section#gererateColors .colors {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.colors .color-code {
+  cursor: pointer;
+  margin: 0 auto;
+  background: #fff5;
+  padding: 0.5rem;
+}
+button#refreshColors {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: var(--primary-color);
+  box-shadow: 0 0 5px 0 #000;
+  border: none;
+  color: white;
+  padding: 0.4rem 2rem;
+  border-radius: 6px;
+}
+section#generateGradients {
+  border: 1px solid brown;
+}

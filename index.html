@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web tools</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <!-- font awesome CDN link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- <i class="fa-solid fa-lock"></i> -->
+    <main>
+      <header>
+        <nav class="navbar">
+          <div class="logo">Pick_Color</div>
+          <ul class="menu-lg">
+            <li>
+              <a href="#">Home</a>
+              <a href="#generateGradients">Gradients</a>
+            </li>
+          </ul>
+          <span class="menu-sm-icon">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+
+          <ul class="menu-sm">
+            <li>
+              <a class="menu-link" href="#">Home</a>
+            </li>
+            <li>
+              <a class="menu-link" href="#generateGradients">Gradients</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="hero">
+          <div class="hero-content">
+            <p class="hero-heading">Craft Stunning Colors Effortlessly</p>
+            <p class="hero-para">
+              Discover the ultimate toolkit for your design needs! Generate
+              vibrant color palettes, stunning gradients, and ready-to-use CSS
+              with ease. Whether you’re a designer, developer, or color
+              enthusiast, our platform ensures creativity flows effortlessly.
+              Bring your vision to life with our intuitive tools!
+            </p>
+            <div class="hero-btns">
+              <a href="#gererateColors"> Generate Colors </a>
+              <a href="#generateGradients"> Generate Gradients </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="./image/hero-image.png" alt="hero-image">
+          </div>
+        </section>
+      </header>
+      <h1 class="colors-heading">Let's Pick Your Favourite Color.</h1>
+      <section id="gererateColors">
+        <button id="refreshColors">Refresh</button>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+      </section>
+      <section id="generateGradients"></section>
+    </main>
+  </body>
+  <script type="module" src="./js/main.js"></script>
+</html>
