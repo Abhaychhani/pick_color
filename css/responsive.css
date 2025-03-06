@@ -45,9 +45,18 @@
     .hero-image{
         display: none;
     }
-    section#gererateColors{
+    section#generateColors > div{
         grid-template-columns: none;
         grid-template-rows: repeat(5,1fr);
+    }
+}
+@media screen and (max-width:570px) {
+    section#generateColors > span{
+        justify-content: flex-end;
+        height: 4rem;
+    }
+    .colors-heading{
+        display: none;
     }
 }
 @media screen and (max-width:480px) {

@@ -1,7 +1,7 @@
 class Colors {
   constructor() {
-    this.ColorSection = document.getElementById("gererateColors");
-    this.colorsContainer = document.querySelectorAll("#gererateColors .colors");
+    this.ColorSection = document.getElementById("generateColors");
+    this.colorsContainer = document.querySelectorAll("#generateColors > div .colors");
     this.refreshColorsBtn = document.getElementById("refreshColors");
     this.#eventListeners();
   }

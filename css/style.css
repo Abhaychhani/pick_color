@@ -180,12 +180,21 @@ h1.colors-heading{
     color: var(--primary-color);
     text-shadow: 0 0 0 var(--primary-color);
 }
-section#gererateColors {
+
+section#generateColors {
   position: relative;
+}
+section#generateColors > span{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section#generateColors > div{
   display: grid;
+  height: calc(100vh - 4rem);
   grid-template-columns: repeat(5, 1fr);
 }
-section#gererateColors .colors {
+section#generateColors > div .colors {
   border: 1px solid rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -198,9 +207,6 @@ section#gererateColors .colors {
   padding: 0.5rem;
 }
 button#refreshColors {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
   background: var(--primary-color);
   box-shadow: 0 0 5px 0 #000;
   border: none;
