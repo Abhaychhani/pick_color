@@ -106,9 +106,12 @@ p.hero-heading {
     "Lucida Sans", Arial, sans-serif;
   font-weight: bolder;
   width: 80%;
+  text-shadow: 2px 2px 5px #333;
 }
 p.hero-para{
-    width: 70%;
+    width: 60%;
+    text-align: justify;
+    font-size: 1.1rem;
 }
 .hero-btns {
   display: flex;
