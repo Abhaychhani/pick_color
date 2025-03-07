@@ -3,6 +3,7 @@ class Colors {
     this.ColorSection = document.getElementById("generateColors");
     this.colorsContainer = document.querySelectorAll("#generateColors > div .colors");
     this.refreshColorsBtn = document.getElementById("refreshColors");
+    this.copyAlert = document.querySelector('.copy-alert');
     this.#eventListeners();
   }
   #eventListeners() {
@@ -13,7 +14,15 @@ class Colors {
       }
 
       if (e.target.classList.contains("color-code")) {
-        window.navigator.clipboard.writeText(e.target.innerText);
+        if(e.target.innerText){
+          window.navigator.clipboard.writeText(e.target.innerText);
+          this.copyAlert.setAttribute('style',`visibility:visible; opacity:1; left:${e.pageX}px; top:${e.pageY}px; transform:translate(-50%,-100%)`)
+          
+          const copyAlertTime = setTimeout(()=>{
+            this.copyAlert.setAttribute('style',"visibility:hidden; opacity:0; left:0; top:0;")            
+            clearTimeout(copyAlertTime)
+          },600);
+        }
       }
     };
   }
@@ -43,4 +52,5 @@ class Colors {
   }
 }
 
-export default Colors;
+const colors = new Colors();
+colors.render();
