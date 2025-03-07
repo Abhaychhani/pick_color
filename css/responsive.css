@@ -1,73 +1,73 @@
-@media screen and (max-width:1200px) {
-    
+@media screen and (max-width: 1200px) {
 }
-@media screen and (max-width:950px) {
-    body{
-        padding: 0 3rem;
-    }
- 
-    
+@media screen and (max-width: 950px) {
+  body {
+    padding: 0 3rem;
+  }
 }
 
-@media screen and (max-width:768px) {
-    body{
-        padding: 0 2rem;
-    }
-   
-    .navbar .menu-sm{
-        display: block;
-    }
-    .menu-sm-icon{
-        display: block;
-    }
-    .navbar .menu-lg{
-        display: none;
-    }
-    .hero-content{
-        height: 100%;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-    p.hero-heading{
-        width: 100%;
-        text-align: center;
-        font-size: 3rem;
-    }
-    p.hero-para{
-        width:80%;
-    }
-    .hero-btns{
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-    .hero-image{
-        display: none;
-    }
-    section#generateColors > div{
-        grid-template-columns: none;
-        grid-template-rows: repeat(5,1fr);
-    }
-}
-@media screen and (max-width:570px) {
-    section#generateColors > span{
-        justify-content: flex-end;
-        height: 4rem;
-    }
-    .colors-heading{
-        display: none;
-    }
-}
-@media screen and (max-width:480px) {
-    body{
-        padding: 0 0.5rem;
-    }
-    .menu-sm .close-nav{
-        right:0.5rem !important;
-    }
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 2rem;
+  }
 
-    p.hero-heading{
-        font-size: 2.2rem;
-    }
+  .navbar .menu-sm {
+    display: block;
+  }
+  .menu-sm-icon {
+    display: block;
+  }
+  .navbar .menu-lg {
+    display: none;
+  }
+  .hero-content {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  p.hero-heading {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+  }
+  p.hero-para {
+    width: 80%;
+  }
+  .hero-btns {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-image {
+    display: none;
+  }
+  section#generateColors > div {
+    grid-template-columns: none;
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+@media screen and (max-width: 570px) {
+  section#generateColors > span {
+    justify-content: flex-end;
+    height: 4rem;
+  }
+  .colors-heading {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0 0.5rem;
+  }
+  .menu-sm .close-nav {
+    right: 0.5rem !important;
+  }
+
+  p.hero-heading {
+    font-size: 2.2rem;
+  }
+  section#generateColors {
+    flex-direction: column-reverse;
+  }
 }
